@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title> Angular Login Page</title>
+		<script src="https://code.angularjs.org/1.5.5/angular.min.js"> </script>
+		<script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+		<script src="test.js"></script>
+	</head>
+
+	<body>
+		<div ng-app="myApp">
+
+			<div ng-controller="myController">
+				<a href="#/"  ng-if="!userStatus">Login  </a> 
+				<a href="#/home_page" ng-if="userStatus">Home | </a>
+				<a href="#/users_page" ng-if="userStatus">Users | </a>
+				<a href="#/userslist" ng-if="userStatus">UserList | </a>  
+				<a href="#/logout" ng-if="userStatus"> Logout </a> <br/><br/>
+
+			</div> 
+			
+			<div ng-view=""> </div>
+		</div>
+	</body>
+</html>
